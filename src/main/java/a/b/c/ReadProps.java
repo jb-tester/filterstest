@@ -33,7 +33,9 @@ public class ReadProps {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            inputStream.close();
+            if (inputStream != null) {
+                inputStream.close();
+            }
         }
     }
 }
