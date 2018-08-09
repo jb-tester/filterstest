@@ -1,7 +1,7 @@
 package a.b.c;
 
 import java.io.IOException;
-import java.util.Properties;
+import java.util.Scanner;
 
 /**
  * *******************************
@@ -14,7 +14,7 @@ public class MainClass {
     public static void main(String[] args) {
        ReadProps readProps = new ReadProps();
         try {
-            readProps.displayProps();
+            readProps.displayProps("messages.properties", "message1", "message2");
         } catch (IOException e) {
             e.printStackTrace();
         }
