@@ -25,6 +25,7 @@ public class ReadProps {
             if (inputStream != null) {
                 prop.load(inputStream);
             } else {
+                flag = false;
                 throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
             }
 
@@ -45,5 +46,6 @@ public class ReadProps {
                 inputStream.close();
             }
         }
+        return flag;
     }
 }
